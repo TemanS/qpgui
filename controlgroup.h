@@ -129,8 +129,8 @@ public:
     {
         init(tw, parent);
     }
-    TButtonGroup(){};
-    ~TButtonGroup(){};
+    TButtonGroup(){}
+    ~TButtonGroup(){}
     QList<T*> widgetList;
     QList<QLabel*> labelList;
     void init(Twidget *tw, QWidget *parent);
