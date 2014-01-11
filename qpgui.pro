@@ -17,7 +17,8 @@ SOURCES += qpgui.cpp \
     style.cpp \
     msg.cpp \
     qpfile.cpp \
-    qpgroupbox.cpp
+    qpgroupbox.cpp \
+    wlineedit.cpp
 
 HEADERS += qpgui.h\
         qpgui_global.h \
@@ -26,14 +27,15 @@ HEADERS += qpgui.h\
     style.h \
     msg.h \
     qpfile.h \
-    qpgroupbox.h
+    qpgroupbox.h \
+    wlineedit.h
 
 debug {
-    DESTDIR = $$PWD/debug
+    DESTDIR = ../lib/debug
 }
 
 release {
-    DESTDIR = $$PWD/release
+    DESTDIR = ../lib/release
 }
 
 symbian {
