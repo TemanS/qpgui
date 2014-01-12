@@ -35,10 +35,4 @@
 #include "qpfile.h"
 #include "qpgroupbox.h"
 
-
-class QPGUISHARED_EXPORT Qpgui {
-public:
-    Qpgui();
-};
-
 #endif // QPGUI_H
