@@ -1,9 +1,9 @@
-#-------------------------------------------------
-#
-# Project created by QtCreator 2011-12-16T17:35:36
-#
-#-------------------------------------------------
 
+message("Building libqpgui ...")
+
+# TARGET is qpgui, and TEMPLATE is lib, so the output of this build will
+# be libqpgui.a
+#
 TARGET = qpgui
 TEMPLATE = lib
 
@@ -13,15 +13,16 @@ DEFINES += QPGUI_LIBRARY
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
-SOURCES += qpgui.cpp \
+SOURCES += \
     style.cpp \
     msg.cpp \
     qpfile.cpp \
     qpgroupbox.cpp \
     wlineedit.cpp
 
-HEADERS += qpgui.h\
-        qpgui_global.h \
+HEADERS += \
+    qpgui.h\
+    qpgui_global.h \
     layout.h \
     controlgroup.h \
     style.h \
@@ -30,38 +31,13 @@ HEADERS += qpgui.h\
     qpgroupbox.h \
     wlineedit.h
 
+# Output the libqpgui.a file to the directory immediately above the
+# respective build file.
+#
 debug {
-    DESTDIR = ../lib/debug
+    DESTDIR = ../lib/
 }
 
 release {
-    DESTDIR = ../lib/release
+    DESTDIR = ../lib
 }
-
-symbian {
-    MMP_RULES += EXPORTUNFROZEN
-    TARGET.UID3 = 0xE2CA2A10
-    TARGET.CAPABILITY =
-    TARGET.EPOCALLOWDLLDATA = 1
-    addFiles.sources = qpgui.dll
-    addFiles.path = !:/sys/bin
-    DEPLOYMENT += addFiles
-}
-
-unix:!symbian {
-    maemo5 {
-        target.path = /opt/usr/lib
-    } else {
-        target.path = /usr/lib
-    }
-    INSTALLS += target
-}
-
-
-
-
-
-
-
-
-
