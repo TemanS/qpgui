@@ -35,9 +35,9 @@ HEADERS += \
 # respective build file.
 #
 debug {
-    DESTDIR = ../lib/
+    DESTDIR = ../../lib
 }
 
 release {
-    DESTDIR = ../lib
+    DESTDIR = ../../lib
 }
